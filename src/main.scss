@@ -1,10 +1,14 @@
 // Pico without default theme
 @use "pico" with (
   $modules: (
-    "themes/default": false
+    "themes/afp": true,
+    "themes/default": false,
   )
 );
 
 // Your custom theme
-@use "theme/afp.scss";   
+@use "theme/afp.scss";
+
+// Auxillary, move to separate import plz
+@import "../node_modules/@fontsource/google-sans-code/latin-400.css";
 
