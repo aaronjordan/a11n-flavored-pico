@@ -1,0 +1,10 @@
+// Pico without default theme
+@use "pico" with (
+  $modules: (
+    "themes/default": false
+  )
+);
+
+// Your custom theme
+@use "theme/afp.scss";   
+

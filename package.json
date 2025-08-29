@@ -1,0 +1,16 @@
+{
+  "name": "a11n-flavored-pico",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "aaronjordan",
+  "type": "module",
+  "scripts": {
+    "test": "",
+    "dev": "cd test && bun -b server.js"
+  },
+  "dependencies": {
+    "@picocss/pico": "^2.1.1",
+    "sass": "^1.91.0"
+  }
+}
