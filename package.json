@@ -11,7 +11,6 @@
     "dev": "cd test && bun -b server.js"
   },
   "dependencies": {
-    "@fontsource/google-sans-code": "^5.2.1",
     "@picocss/pico": "^2.1.1",
     "sass": "^1.91.0"
   }

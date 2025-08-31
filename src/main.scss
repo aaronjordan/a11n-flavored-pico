@@ -1,14 +1,17 @@
-// Pico without default theme
+@use "variables" as v;
+
 @use "pico" with (
+  $theme-color: "jade",
+  $enable-responsive-typography: false,
+  $enable-viewport: false,
   $modules: (
+    "components/text-grid": true,
+    "layout/container": false,
     "themes/afp": true,
     "themes/default": false,
   )
 );
 
-// Your custom theme
 @use "theme/afp.scss";
 
-// Auxillary, move to separate import plz
-@import "../node_modules/@fontsource/google-sans-code/latin-400.css";
 

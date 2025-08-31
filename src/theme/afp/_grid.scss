@@ -1,0 +1,51 @@
+
+@use "sass:map";
+@use "settings" as *;
+
+@if map.get($modules, "themes/afp") {
+  @if map.get($modules, "components/text-grid") {
+    .text-grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns:
+        [full-start] 1fr
+        [margin-start] calc(2 * var(#{$css-var-prefix}spacing))
+        [lane-start] min(660px, calc(100% - calc(4 * var(#{$css-var-prefix}spacing))))
+        [lane-end] calc(2 * var(#{$css-var-prefix}spacing))
+        [margin-end] 1fr
+        [full-end];
+      align-content: start;
+      position: relative;
+    }
+
+    .text-grid::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      inset: 0;
+      grid-column: margin-start / margin-end;
+      box-shadow: 1px 0 0 0 var(--color-zinc-800),
+        -1px 0 0 0 var(--color-zinc-800);
+      box-sizing: content-box;
+      z-index: -1;
+    }
+
+    .text-grid > * {
+      grid-column: lane-start / lane-end;
+    }
+
+    @if map.get($modules, "content/code") {
+      .text-grid > pre {
+        grid-column: margin-start / margin-end;
+        margin-top: var(#{$css-var-prefix}spacing);
+        padding-inline: calc(2 * var(#{$css-var-prefix}spacing));
+        padding-block: calc(1.5 * var(#{$css-var-prefix}spacing));
+      }
+
+      .text-grid > pre > code {
+        width: max-content;
+        padding: 0;
+      }
+    }
+  }
+}

@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why ES Modules Beat CommonJS - Tech Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Hepta+Slab:wght@1..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../dist/main.css">
 </head>
-<body>
-  <header class="container">
+<body class="">
+  <header class="text-grid">
     <nav>
       <ul>
         <li><strong>Tech Blog</strong></li>
@@ -21,26 +24,23 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="text-grid">
     <!-- Blog Header -->
-    <section>
       <hgroup>
         <h1>Three Compelling Reasons to Choose ES Modules Over CommonJS</h1>
         <h2>Why modern JavaScript development benefits from embracing the module standard</h2>
       </hgroup>
       <p><small>Published on <time datetime="2025-08-28">August 28, 2025</time> by <strong>Tech Writer</strong></small></p>
-    </section>
 
     <!-- Introduction -->
-    <section>
       <p>The JavaScript ecosystem has undergone significant transformation over the past decade, with one of the most impactful changes being the introduction of ES Modules (ESM) as the official module system. While CommonJS served the Node.js community well for many years, the time has come to embrace the future of JavaScript modularity. In this comprehensive analysis, we'll explore three fundamental reasons why ES Modules represent a superior choice for modern JavaScript development, examining their impact on performance optimization, developer tooling capabilities, and long-term ecosystem sustainability.</p>
       
       <p>As we navigate the complexities of modern web development, understanding the technical advantages of ES Modules becomes crucial for making informed architectural decisions. The transition from CommonJS to ES Modules isn't merely about following trends—it's about leveraging concrete improvements that directly impact application performance, development experience, and code maintainability in ways that benefit both developers and end users.</p>
-    </section>
 
     <!-- Reason 1: Performance -->
-    <section id="performance">
       <h2>1. Superior Performance Through Static Analysis</h2>
+
+      <p>There should be content here.</p>
       
       <h3>Tree Shaking and Dead Code Elimination</h3>
       <p>ES Modules enable sophisticated static analysis that CommonJS simply cannot match due to their fundamentally different design philosophies. While CommonJS uses dynamic <code>require()</code> calls that are resolved at runtime, ES Modules employ static <code>import</code> and <code>export</code> statements that can be analyzed at build time. This static nature allows bundlers like Webpack, Rollup, and Vite to perform aggressive tree shaking, eliminating unused code with unprecedented precision and reducing final bundle sizes by significant margins.</p>
@@ -57,15 +57,13 @@ const { debounce, throttle } = require('lodash');
       <p>The asynchronous nature of ES Module loading provides substantial performance advantages in browser environments. Unlike CommonJS modules that block execution during synchronous loading, ES Modules can be loaded in parallel, parsed incrementally, and executed when dependencies are resolved. This non-blocking behavior significantly improves application startup times and enables more sophisticated loading strategies like dynamic imports for code splitting.</p>
 
       <blockquote>
-        "The performance gains from ES Modules aren't just theoretical—real-world applications see 20-40% reductions in bundle size and measurable improvements in load times when migrating from CommonJS to ESM with proper tree shaking."
+        <p>The performance gains from ES Modules aren't just theoretical—real-world applications see 20-40% reductions in bundle size and measurable improvements in load times when migrating from CommonJS to ESM with proper tree shaking.</p>
         <footer>
-          <cite>— Sarah Chen, Senior Frontend Architect at TechCorp</cite>
+          <cite><strong>Sarah Chen</strong>, TechCorp</cite>
         </footer>
       </blockquote>
-    </section>
 
     <!-- Reason 2: Tooling -->
-    <section id="tooling">
       <h2>2. Enhanced Developer Experience and Tooling</h2>
 
       <h3>Superior IDE Support and IntelliSense</h3>
@@ -88,15 +86,9 @@ export class AuthController {
   }
 }</code></pre>
 
-      <h3>Build Tool Integration and Hot Module Replacement</h3>
-      <p>ES Modules integrate seamlessly with modern build tools and development servers, enabling features like Hot Module Replacement (HMR) to work more reliably and efficiently. Tools like Vite leverage ES Modules' native browser support during development, eliminating the need for complex bundling during the development phase and providing near-instantaneous feedback loops. The explicit dependency graph also enables more sophisticated caching strategies and incremental compilation techniques.</p>
-
-      <p>The standardized nature of ES Module syntax means that linting tools, formatters, and static analysis tools can provide more consistent and reliable results across different projects and environments. This consistency reduces configuration overhead and improves team productivity by establishing clear, universal patterns for module organization and dependency management.</p>
-    </section>
-
     <!-- Reason 3: Standards -->
-    <section id="standards">
       <h2>3. Future-Proof Standards Compliance</h2>
+      <p>There should be content here.</p>
 
       <h3>Native Browser Support and Web Standards</h3>
       <p>ES Modules represent the official ECMAScript standard for modularity, enjoying native support in all modern browsers without requiring transpilation or polyfills. This native support means that ES Modules can be loaded directly by browsers using <code>&lt;script type="module"&gt;</code> tags, eliminating the need for complex build processes in many scenarios and enabling more straightforward deployment strategies for modern web applications.</p>
@@ -114,20 +106,17 @@ export class AuthController {
       <p>The JavaScript ecosystem is steadily converging on ES Modules as the universal module format, with major libraries, frameworks, and runtime environments increasingly prioritizing ESM support. Node.js has embraced ES Modules as a first-class citizen, Deno was built with ESM as the default, and even traditional CommonJS-heavy ecosystems are migrating toward dual-package strategies that prioritize ES Module exports. This ecosystem-wide adoption ensures that choosing ES Modules today positions projects for long-term compatibility and reduces the likelihood of future migration challenges.</p>
 
       <p>Furthermore, emerging web standards like Import Maps and dynamic imports continue to expand the capabilities of ES Modules, providing developers with increasingly sophisticated tools for managing dependencies and optimizing loading strategies. By adopting ES Modules now, development teams align themselves with the trajectory of web platform evolution and ensure their codebases remain compatible with future innovations in the JavaScript ecosystem.</p>
-    </section>
 
     <hr>
 
     <!-- Conclusion -->
-    <section>
       <h2>Conclusion: Embracing the Module Future</h2>
       <p>The transition from CommonJS to ES Modules represents more than a simple syntax change—it's a fundamental shift toward better performance, enhanced developer experience, and future-proof standards compliance. While legacy CommonJS code will continue to function, new projects and major refactoring efforts should strongly consider ES Modules as the foundation for modern JavaScript architecture.</p>
 
       <p>The benefits of static analysis, superior tooling integration, and native browser support create a compelling case for ES Module adoption that extends far beyond theoretical advantages. As the JavaScript ecosystem continues to evolve, ES Modules provide the solid foundation necessary for building maintainable, performant, and future-ready applications that can adapt to the changing landscape of web development.</p>
-    </section>
   </main>
 
-  <footer class="container">
+  <footer class="text-grid">
     <small>Tech Blog • <a href="index.html">Back to Home</a> • <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">Learn More About ES Modules</a></small>
   </footer>
 </body>

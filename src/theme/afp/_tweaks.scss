@@ -1,0 +1,109 @@
+@use "sass:map";
+@use "settings" as *;
+
+
+@if map.get($modules, "themes/afp") {
+  :root {
+    #{$css-var-prefix}container-border-radius: 0.675rem;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  code, kbd, samp {
+    padding: 0.25rem;
+  }
+
+  hr {
+    margin-top: calc(2 * var(#{$css-var-prefix}spacing));
+  }
+
+  hr + h2 {
+    #{$css-var-prefix}typography-spacing-top: 2rem;
+  }
+
+  article, dialog {
+    border-radius: var(#{$css-var-prefix}container-border-radius);
+
+    > header {
+      border-top-left-radius: var(#{$css-var-prefix}container-border-radius);
+      border-top-right-radius: var(#{$css-var-prefix}container-border-radius);
+    }
+
+    > footer {
+      border-bottom-left-radius: var(#{$css-var-prefix}container-border-radius);
+      border-bottom-right-radius: var(#{$css-var-prefix}container-border-radius);
+    }
+  }
+
+  blockquote {
+    font-family: var(#{$css-var-prefix}font-family-serif);
+    border: none;
+    padding: 0;
+    margin-block: var(#{$css-var-prefix}spacing);
+  }
+
+  blockquote > p {
+    position: relative;
+    display: inline;
+    font-size: 1.25rem;
+  }
+  blockquote > p::before, 
+  blockquote > p::after {
+    content: "\"";
+    position: absolute;
+    display: inline;
+  }
+
+  blockquote > p::before {
+    content: "\201C";
+    left: -0.625rem;
+  }
+  blockquote > p::after {
+    content: "\201D";
+    transform: translateX(0.125rem);
+  }
+
+  cite {
+    position: relative;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    font-style: normal;
+    font-family: var(#{$css-var-prefix}font-family);
+
+    > strong {
+      color: var(#{$css-var-prefix}color);
+      font-weight: 500;
+    }
+
+    > strong::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 6ch;
+      right: calc(100% + 0.5 * var(#{$css-var-prefix}spacing));
+      top: 50%;
+      border-top: 1px solid var(#{$css-var-prefix}blockquote-footer-color);
+      opacity: 0.5;
+    } 
+  }
+
+  @if map.get($modules, "content/typography") {
+    // Additional tweaks on base styles
+    hgroup > :not(:first-child):last-child {
+      margin-top: 0.375rem;
+      font-family: var(#{$css-var-prefix}font-family-sans-serif);
+    }
+  }
+}
+
+

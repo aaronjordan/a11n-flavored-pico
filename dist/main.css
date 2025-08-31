@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "../node_modules/@fontsource/google-sans-code/latin-400.css";
 /*!
  * Pico CSS ✨ v2.1.1 (https://picocss.com)
  * Copyright 2019-2025 - Licensed under MIT
@@ -61,46 +60,6 @@ body > footer {
  */
 section {
   margin-bottom: var(--pico-block-spacing-vertical);
-}
-
-/**
- * Container
- */
-.container,
-.container-fluid {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--pico-spacing);
-  padding-left: var(--pico-spacing);
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 510px;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 700px;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 950px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1450px;
-  }
 }
 
 /**
@@ -2192,16 +2151,17 @@ textarea,
  */
 :root,
 :host {
-  --pico-font-family-headings: "Menlo";
+  --pico-font-family-headings: "Google Sans Code";
   --pico-font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --pico-font-family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
-  --pico-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace, var(--pico-font-family-emoji);
+  --pico-font-family-sans-serif: "Figtree";
+  --pico-font-family-monospace: "Google Sans Code";
+  --pico-font-family-serif: "Vollkorn";
   --pico-font-family: var(--pico-font-family-sans-serif);
-  --pico-line-height: 1.5;
+  --pico-line-height: 1.65;
   --pico-font-weight: 400;
   --pico-font-size: 100%;
   --pico-text-underline-offset: 0.1rem;
-  --pico-border-radius: 0.25rem;
+  --pico-border-radius: 0.5rem;
   --pico-border-width: 0.0625rem;
   --pico-outline-width: 0.125rem;
   --pico-transition: 0.2s ease-in-out;
@@ -2211,7 +2171,7 @@ textarea,
   --pico-block-spacing-horizontal: var(--pico-spacing);
   --pico-grid-column-gap: var(--pico-spacing);
   --pico-grid-row-gap: var(--pico-spacing);
-  --pico-form-element-spacing-vertical: 0.75rem;
+  --pico-form-element-spacing-vertical: 0.5rem;
   --pico-form-element-spacing-horizontal: 1rem;
   --pico-group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --pico-group-box-shadow-focus-with-button: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
@@ -2224,42 +2184,12 @@ textarea,
   --pico-nav-breadcrumb-divider: ">";
   --pico-icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   --pico-icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
-  --pico-icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  --pico-icon-date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
-  --pico-icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
-  --pico-icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
-  --pico-icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
-  --pico-icon-loading: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='rgb(136, 145, 164)' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
-}
-@media (min-width: 576px) {
-  :root,
-  :host {
-    --pico-font-size: 106.25%;
-  }
-}
-@media (min-width: 768px) {
-  :root,
-  :host {
-    --pico-font-size: 112.5%;
-  }
-}
-@media (min-width: 1024px) {
-  :root,
-  :host {
-    --pico-font-size: 118.75%;
-  }
-}
-@media (min-width: 1280px) {
-  :root,
-  :host {
-    --pico-font-size: 125%;
-  }
-}
-@media (min-width: 1536px) {
-  :root,
-  :host {
-    --pico-font-size: 131.25%;
-  }
+  --pico-icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149, 144, 130)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --pico-icon-date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149, 144, 130)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+  --pico-icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149, 144, 130)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
+  --pico-icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149, 144, 130)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  --pico-icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(149, 144, 130)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  --pico-icon-loading: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='rgb(149, 144, 130)' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
 }
 
 a {
@@ -2280,43 +2210,30 @@ h4,
 h5,
 h6 {
   --pico-font-family: var(--pico-font-family-headings);
-  --pico-font-weight: 700;
 }
 
 h1 {
-  --pico-font-size: 2rem;
+  --pico-font-size: 1.75rem;
+  --pico-font-weight: 600;
   --pico-line-height: 1.125;
-  --pico-typography-spacing-top: 3rem;
+  --pico-typography-spacing-top: 4.5rem;
+}
+
+h2, h3, h4 {
+  --pico-font-weight: 500;
+  --pico-font-size: 1.25rem;
 }
 
 h2 {
-  --pico-font-size: 1.75rem;
-  --pico-line-height: 1.15;
-  --pico-typography-spacing-top: 2.625rem;
+  --pico-typography-spacing-top: 4.25rem;
 }
 
 h3 {
-  --pico-font-size: 1.5rem;
-  --pico-line-height: 1.175;
-  --pico-typography-spacing-top: 2.25rem;
+  --pico-typography-spacing-top: 1.5rem;
 }
 
 h4 {
-  --pico-font-size: 1.25rem;
-  --pico-line-height: 1.2;
-  --pico-typography-spacing-top: 1.874rem;
-}
-
-h5 {
-  --pico-font-size: 1.125rem;
-  --pico-line-height: 1.225;
-  --pico-typography-spacing-top: 1.6875rem;
-}
-
-h6 {
-  --pico-font-size: 1rem;
-  --pico-line-height: 1.25;
-  --pico-typography-spacing-top: 1.5rem;
+  --pico-typography-spacing-top: 1.25rem;
 }
 
 thead th,
@@ -2355,6 +2272,7 @@ input:not([type=submit],
 [type=checkbox],
 [type=radio] {
   --pico-border-width: 0.125rem;
+  --pico-border-radius: 0.375rem;
 }
 
 [type=checkbox][role=switch] {
@@ -2421,18 +2339,18 @@ details summary[role=button]:not(.outline)::after {
   color-scheme: light;
   --pico-background-color: #fff;
   --pico-color: #373c44;
-  --pico-text-selection-color: rgba(2, 154, 232, 0.25);
+  --pico-text-selection-color: rgba(0, 166, 110, 0.25);
   --pico-muted-color: #646b79;
   --pico-muted-border-color: rgb(231, 234, 239.5);
-  --pico-primary: #0172ad;
-  --pico-primary-background: #0172ad;
+  --pico-primary: #007a50;
+  --pico-primary-background: #007a50;
   --pico-primary-border: var(--pico-primary-background);
-  --pico-primary-underline: rgba(1, 114, 173, 0.5);
-  --pico-primary-hover: #015887;
-  --pico-primary-hover-background: #02659a;
+  --pico-primary-underline: rgba(0, 122, 80, 0.5);
+  --pico-primary-hover: #005f3d;
+  --pico-primary-hover-background: #006d46;
   --pico-primary-hover-border: var(--pico-primary-hover-background);
   --pico-primary-hover-underline: var(--pico-primary-hover);
-  --pico-primary-focus: rgba(2, 154, 232, 0.5);
+  --pico-primary-focus: rgba(0, 166, 110, 0.5);
   --pico-primary-inverse: #fff;
   --pico-secondary: #5d6b89;
   --pico-secondary-background: #525f7a;
@@ -2548,18 +2466,18 @@ details summary[role=button]:not(.outline)::after {
     color-scheme: dark;
     --pico-background-color: rgb(19, 22.5, 30.5);
     --pico-color: #c2c7d0;
-    --pico-text-selection-color: rgba(1, 170, 255, 0.1875);
+    --pico-text-selection-color: rgba(0, 180, 120, 0.1875);
     --pico-muted-color: #7b8495;
     --pico-muted-border-color: #202632;
-    --pico-primary: #01aaff;
-    --pico-primary-background: #0172ad;
+    --pico-primary: #00b478;
+    --pico-primary-background: #007a50;
     --pico-primary-border: var(--pico-primary-background);
-    --pico-primary-underline: rgba(1, 170, 255, 0.5);
-    --pico-primary-hover: #79c0ff;
-    --pico-primary-hover-background: #017fc0;
+    --pico-primary-underline: rgba(0, 180, 120, 0.5);
+    --pico-primary-hover: #00cc88;
+    --pico-primary-hover-background: #00895a;
     --pico-primary-hover-border: var(--pico-primary-hover-background);
     --pico-primary-hover-underline: var(--pico-primary-hover);
-    --pico-primary-focus: rgba(1, 170, 255, 0.375);
+    --pico-primary-focus: rgba(0, 180, 120, 0.375);
     --pico-primary-inverse: #fff;
     --pico-secondary: #969eaf;
     --pico-secondary-background: #525f7a;
@@ -2588,7 +2506,7 @@ details summary[role=button]:not(.outline)::after {
     --pico-h4-color: #b3b9c5;
     --pico-h5-color: #a4acba;
     --pico-h6-color: #8891a4;
-    --pico-mark-background-color: #014063;
+    --pico-mark-background-color: #015234;
     --pico-mark-color: #fff;
     --pico-ins-color: #62af9a;
     --pico-del-color: rgb(205.5, 126, 123);
@@ -2683,18 +2601,18 @@ details summary[role=button]:not(.outline)::after {
   color-scheme: dark;
   --pico-background-color: rgb(19, 22.5, 30.5);
   --pico-color: #c2c7d0;
-  --pico-text-selection-color: rgba(1, 170, 255, 0.1875);
+  --pico-text-selection-color: rgba(0, 180, 120, 0.1875);
   --pico-muted-color: #7b8495;
   --pico-muted-border-color: #202632;
-  --pico-primary: #01aaff;
-  --pico-primary-background: #0172ad;
+  --pico-primary: #00b478;
+  --pico-primary-background: #007a50;
   --pico-primary-border: var(--pico-primary-background);
-  --pico-primary-underline: rgba(1, 170, 255, 0.5);
-  --pico-primary-hover: #79c0ff;
-  --pico-primary-hover-background: #017fc0;
+  --pico-primary-underline: rgba(0, 180, 120, 0.5);
+  --pico-primary-hover: #00cc88;
+  --pico-primary-hover-background: #00895a;
   --pico-primary-hover-border: var(--pico-primary-hover-background);
   --pico-primary-hover-underline: var(--pico-primary-hover);
-  --pico-primary-focus: rgba(1, 170, 255, 0.375);
+  --pico-primary-focus: rgba(0, 180, 120, 0.375);
   --pico-primary-inverse: #fff;
   --pico-secondary: #969eaf;
   --pico-secondary-background: #525f7a;
@@ -2723,7 +2641,7 @@ details summary[role=button]:not(.outline)::after {
   --pico-h4-color: #b3b9c5;
   --pico-h5-color: #a4acba;
   --pico-h6-color: #8891a4;
-  --pico-mark-background-color: #014063;
+  --pico-mark-background-color: #015234;
   --pico-mark-color: #fff;
   --pico-ins-color: #62af9a;
   --pico-del-color: rgb(205.5, 126, 123);
@@ -2807,6 +2725,138 @@ progress,
 [type=radio],
 [type=range] {
   accent-color: var(--pico-primary);
+}
+
+.text-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: [full-start] 1fr [margin-start] calc(2 * var(--pico-spacing)) [lane-start] min(660px, 100% - 4 * var(--pico-spacing)) [lane-end] calc(2 * var(--pico-spacing)) [margin-end] 1fr [full-end];
+  align-content: start;
+  position: relative;
+}
+
+.text-grid::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  inset: 0;
+  grid-column: margin-start/margin-end;
+  box-shadow: 1px 0 0 0 var(--color-zinc-800), -1px 0 0 0 var(--color-zinc-800);
+  box-sizing: content-box;
+  z-index: -1;
+}
+
+.text-grid > * {
+  grid-column: lane-start/lane-end;
+}
+
+.text-grid > pre {
+  grid-column: margin-start/margin-end;
+  margin-top: var(--pico-spacing);
+  padding-inline: calc(2 * var(--pico-spacing));
+  padding-block: calc(1.5 * var(--pico-spacing));
+}
+
+.text-grid > pre > code {
+  width: max-content;
+  padding: 0;
+}
+
+:root {
+  --pico-container-border-radius: 0.675rem;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+code, kbd, samp {
+  padding: 0.25rem;
+}
+
+hr {
+  margin-top: calc(2 * var(--pico-spacing));
+}
+
+hr + h2 {
+  --pico-typography-spacing-top: 2rem;
+}
+
+article, dialog {
+  border-radius: var(--pico-container-border-radius);
+}
+article > header, dialog > header {
+  border-top-left-radius: var(--pico-container-border-radius);
+  border-top-right-radius: var(--pico-container-border-radius);
+}
+article > footer, dialog > footer {
+  border-bottom-left-radius: var(--pico-container-border-radius);
+  border-bottom-right-radius: var(--pico-container-border-radius);
+}
+
+blockquote {
+  font-family: var(--pico-font-family-serif);
+  border: none;
+  padding: 0;
+  margin-block: var(--pico-spacing);
+}
+
+blockquote > p {
+  position: relative;
+  display: inline;
+  font-size: 1.25rem;
+}
+
+blockquote > p::before,
+blockquote > p::after {
+  content: '"';
+  position: absolute;
+  display: inline;
+}
+
+blockquote > p::before {
+  content: "“";
+  left: -0.625rem;
+}
+
+blockquote > p::after {
+  content: "”";
+  transform: translateX(0.125rem);
+}
+
+cite {
+  position: relative;
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  font-style: normal;
+  font-family: var(--pico-font-family);
+}
+cite > strong {
+  color: var(--pico-color);
+  font-weight: 500;
+}
+cite > strong::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 6ch;
+  right: calc(100% + 0.5 * var(--pico-spacing));
+  top: 50%;
+  border-top: 1px solid var(--pico-blockquote-footer-color);
+  opacity: 0.5;
+}
+
+hgroup > :not(:first-child):last-child {
+  margin-top: 0.375rem;
+  font-family: var(--pico-font-family-sans-serif);
 }
 
 /*# sourceMappingURL=main.css.map */
