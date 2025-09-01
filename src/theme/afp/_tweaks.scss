@@ -1,6 +1,7 @@
+@use "sass:color";
 @use "sass:map";
 @use "settings" as *;
-
+@use "tw-colors" as tw;
 
 @if map.get($modules, "themes/afp") {
   :root {
@@ -16,6 +17,8 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-color: color.change(tw.$stone-300, $alpha: 0.25) transparent;
   }
 
   code, kbd, samp {
@@ -23,11 +26,11 @@
   }
 
   hr {
-    margin-top: calc(2 * var(#{$css-var-prefix}spacing));
+    margin-top: calc(4 * var(#{$css-var-prefix}spacing));
   }
 
   hr + h2 {
-    #{$css-var-prefix}typography-spacing-top: 2rem;
+    #{$css-var-prefix}typography-spacing-top: 1rem;
   }
 
   article, dialog {
