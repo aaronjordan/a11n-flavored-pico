@@ -5,8 +5,13 @@ Bun.serve({
     
     switch (url.pathname) {
       case "/":
+      case "/index":
+      case "/index.html":
         return new Response(Bun.file("./index.html"));
+      case "/light":
+        return new Response(Bun.file("./index-light.html"));
       case "/blog":
+      case "/blog.html":
         return new Response(Bun.file("./blog.html"));
       case "/dist/main.css":
         return new Response(Bun.file("../dist/main.css"), {

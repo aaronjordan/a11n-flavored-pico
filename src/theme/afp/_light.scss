@@ -14,7 +14,7 @@
   #{$css-var-prefix}color: #{$zinc-750};
 
   // Text selection color
-  #{$css-var-prefix}text-selection-color: theme-colors.get("text-selection-color", "light");
+  #{$css-var-prefix}text-selection-color: #{color.change($lime-150, $alpha: 0.5)};
 
   // Muted colors
   #{$css-var-prefix}muted-color: #{$zinc-550};
@@ -70,12 +70,12 @@
     #{$css-var-prefix}h6-color: #{$zinc-550};
 
     // Highlighted text (<mark>)
-    #{$css-var-prefix}mark-background-color: #{color.mix($amber-100, $amber-50)};
-    #{$css-var-prefix}mark-color: #{$zinc-950};
+    #{$css-var-prefix}mark-background-color: #{color.change($lime-250, $alpha: 0.5)};
+    #{$css-var-prefix}mark-color: #{$lime-950};
 
     // Inserted (<ins>) & Deleted (<del>)
     #{$css-var-prefix}ins-color: #{color.mix($jade-450, $zinc-750)};
-    #{$css-var-prefix}del-color: #{color.mix($red-500, $zinc-750)};
+    #{$css-var-prefix}del-color: #{color.mix($red-400, $zinc-750)};
 
     // Blockquote
     #{$css-var-prefix}blockquote-border-color: var(#{$css-var-prefix}muted-border-color);

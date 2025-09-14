@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicoCSS Custom Theme Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Hepta+Slab:wght@1..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/main.css">
+</head>
+<body class="text-grid" data-theme="">
+  <header class="">
+    <nav>
+      <ul>
+        <li><strong>PicoCSS Theme</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#components">Components</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="">
+      <!-- Hero Section -->
+      <section>
+        <hgroup>
+          <h1>Custom PicoCSS Theme Preview</h1>
+          <h2>Testing all components and styles</h2>
+        </hgroup>
+      </section>
+
+      <!-- Typography Section -->
+      <section id="typography">
+        <h2>Typography</h2>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        
+        <p>This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, 
+        <mark>highlighted text</mark>, and <small>small text</small>.</p>
+        
+        <blockquote>
+          This is a blockquote. It should have distinct styling to set it apart from regular text.
+        </blockquote>
+        
+        <ul>
+          <li>Unordered list item 1</li>
+          <li>Unordered list item 2</li>
+          <li>Unordered list item 3</li>
+        </ul>
+        
+        <ol>
+          <li>Ordered list item 1</li>
+          <li>Ordered list item 2</li>
+          <li>Ordered list item 3</li>
+        </ol>
+      </section>
+
+      <!-- Buttons Section -->
+      <section>
+        <h2>Buttons</h2>
+        <button>Primary Button</button>
+        <button class="secondary">Secondary Button</button>
+        <button class="contrast">Contrast Button</button>
+        <button disabled>Disabled Button</button>
+        
+        <div style="margin-top: 1rem;">
+          <button class="outline">Outline Button</button>
+          <button class="outline secondary">Outline Secondary</button>
+          <button class="outline contrast">Outline Contrast</button>
+        </div>
+      </section>
+
+      <!-- Forms Section -->
+      <section id="forms">
+        <h2>Forms</h2>
+        <form>
+          <input type="text" id="text" placeholder="Text Input">
+          
+          <div role="group">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+          </div>
+          
+          <input type="text" id="valid-field" placeholder="Valid Field" aria-invalid="false">
+          <small>This field is valid and ready to submit</small>
+          
+          <input type="text" id="invalid-field" placeholder="Invalid Field (has error)" aria-invalid="true">
+          <small>Please enter a valid value for this field</small>
+          
+          <input type="email" placeholder="Email with helper text">
+          <small>We'll never share your email with anyone else</small>
+          
+          <input type="search" placeholder="Search">
+          
+          <div role="group">
+            <input type="date" placeholder="Date">
+            <input type="time" placeholder="Time">
+          </div>
+          
+          <div role="group">
+            <input type="datetime-local" placeholder="Date & Time">
+            <input type="month" placeholder="Month">
+            <input type="week" placeholder="Week">
+          </div>
+          
+          <div role="group">
+            <input type="file" accept="image/*" title="File Upload">
+            <input type="color" value="#007bff" title="Color Picker">
+          </div>
+          
+          <select id="select">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          
+          <select required>
+            <option value="" disabled selected>Choose an option...</option>
+            <option value="1">First Choice</option>
+            <option value="2">Second Choice</option>
+            <option value="3">Third Choice</option>
+          </select>
+          
+          <textarea id="textarea" placeholder="Enter your message"></textarea>
+          
+          <fieldset>
+            <legend>Checkboxes</legend>
+            <label for="checkbox1">
+              <input type="checkbox" id="checkbox1" checked>
+              Checked checkbox
+            </label>
+            <label for="checkbox2">
+              <input type="checkbox" id="checkbox2">
+              Unchecked checkbox
+            </label>
+          </fieldset>
+          
+          <fieldset>
+            <legend>Radio buttons</legend>
+            <label for="radio1">
+              <input type="radio" id="radio1" name="radio" value="1" checked>
+              Option 1
+            </label>
+            <label for="radio2">
+              <input type="radio" id="radio2" name="radio" value="2">
+              Option 2
+            </label>
+          </fieldset>
+          
+          <label for="switch">
+            <input type="checkbox" id="switch" role="switch">
+            Switch
+          </label>
+          
+          <label for="range">Range: <input type="range" id="range" value="50"></label>
+          
+          <button type="submit">Submit Form</button>
+        </form>
+      </section>
+
+      <!-- Table Section -->
+      <section>
+        <h2>Table</h2>
+        <figure>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">City</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Alice</th>
+                <td>25</td>
+                <td>New York</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <th scope="row">Bob</th>
+                <td>30</td>
+                <td>San Francisco</td>
+                <td>Inactive</td>
+              </tr>
+              <tr>
+                <th scope="row">Charlie</th>
+                <td>35</td>
+                <td>Chicago</td>
+                <td>Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+      <!-- Cards Section -->
+      <section id="components">
+        <h2>Cards</h2>
+        <div class="grid">
+          <article>
+            <header>Card Title</header>
+            <p>This is a card with some content. Cards are great for organizing information into digestible chunks.</p>
+            <footer>
+              <button>Action</button>
+            </footer>
+          </article>
+          <article>
+            <header>Another Card</header>
+            <p>Cards automatically adapt to the grid system and provide consistent spacing and styling.</p>
+            <footer>
+              <button class="secondary">Secondary Action</button>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <!-- Dropdown -->
+      <section>
+        <h2>Dropdown</h2>
+        <details class="dropdown">
+          <summary>Dropdown</summary>
+          <ul>
+            <li><a href="#">Solid</a></li>
+            <li><a href="#">Liquid</a></li>
+            <li><a href="#">Gas</a></li>
+            <li><a href="#">Plasma</a></li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- Progress and Loading -->
+      <section>
+        <h2>Progress & Loading</h2>
+        <progress value="70" max="100">70%</progress>
+        <button aria-busy="true">Loading Button</button>
+      </section>
+
+      <!-- Accordion -->
+      <section>
+        <h2>Accordion</h2>
+        <details>
+          <summary>Expandable Section 1</summary>
+          <p>This content is hidden by default and can be expanded by clicking the summary.</p>
+        </details>
+        <details open>
+          <summary>Expandable Section 2 (Open)</summary>
+          <p>This section is open by default. Accordions are great for FAQs and collapsible content.</p>
+        </details>
+      </section>
+
+      <!-- Tooltip -->
+      <section>
+        <h2>Tooltips</h2>
+        <p>Tooltip on a <a href="#" data-tooltip="This is a tooltip on a link">link</a></p>
+        <p>Tooltip on <em data-tooltip="Tooltip on inline element">inline element</em></p>
+        <div>
+          <button data-tooltip="Top tooltip">Top</button>
+          <button data-tooltip="Right tooltip" data-placement="right">Right</button>
+          <button data-tooltip="Bottom tooltip" data-placement="bottom">Bottom</button>
+          <button data-tooltip="Left tooltip" data-placement="left">Left</button>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <section>
+        <h2>Modal</h2>
+        <button class="contrast" data-target="modal" onclick="toggleModal(event)">Toggle modal</button>
+        <dialog id="modal">
+          <article>
+            <header>
+              <button aria-label="Close" rel="prev" data-target="modal" onclick="toggleModal(event)"></button>
+              <p><strong>🗓️ Modal Example</strong></p>
+            </header>
+            <p>This is a modal dialog. You can put any content here including forms, images, or other components.</p>
+            <footer>
+              <button class="secondary" data-target="modal" onclick="toggleModal(event)">Cancel</button>
+              <button data-target="modal" onclick="toggleModal(event)">Confirm</button>
+            </footer>
+          </article>
+        </dialog>
+      </section>
+
+      <!-- Grid Demo -->
+      <section>
+        <h2>Grid System</h2>
+        <div class="grid">
+          <article>Grid Item 1</article>
+          <article>Grid Item 2</article>
+          <article>Grid Item 3</article>
+        </div>
+      </section>
+  </main>
+
+  <footer class="">
+    <small>PicoCSS Custom Theme Preview • <a href="https://picocss.com">PicoCSS Documentation</a></small>
+  </footer>
+
+  <script>
+    function toggleModal(event) {
+      const modal = document.getElementById(event.target.getAttribute('data-target'));
+      if (modal.hasAttribute('open')) {
+        document.documentElement.classList.add('modal-is-closing');
+        setTimeout(() => {
+          modal.close();
+          document.documentElement.classList.remove('modal-is-open', 'modal-is-opening', 'modal-is-closing');
+        }, 200);
+      } else {
+        modal.showModal();
+        document.documentElement.classList.add('modal-is-open', 'modal-is-opening');
+        setTimeout(() => {
+          document.documentElement.classList.remove('modal-is-opening');
+        }, 200);
+      }
+    }
+
+    // Handle escape key and clean up classes
+    document.getElementById('modal').addEventListener('close', () => {
+      document.documentElement.classList.remove('modal-is-open', 'modal-is-opening', 'modal-is-closing');
+    });
+  </script>
+</body>
+</html>
